@@ -86,20 +86,37 @@ function initMap() {
 
 	map = new google.maps.Map(document.getElementById('school-map'), mapOptions);
 
-	var image = {
-		url: 'http://www.hcpss.org/f/mrb/icons/grad-cap-transparent.png',
-		size: new google.maps.Size(32,30),
-		origin: new google.maps.Point(0,0),
-		anchor: new google.maps.Point(16,24),
-		scaledSize: new google.maps.Size(32,30)
-	}
-
 	for (var i in schools) {
     	var school = schools[i];
 
     	var content = "<h3>" + school.name + "</h3>" + "<p class='school-map__address'>" + school.address + "</p>" + "<p><a href=" + school.web + " target='_blank'>Website</a></p>" + "</p>" + "<p><a href=" + school.directions + " target='_blank'>Get Directions</a></p>";
 
     	var location = new google.maps.LatLng(school.lat, school.lng);
+
+    	var icon = "";
+
+        switch (school.type) {
+            case "elementary":
+                icon = "red";
+                break;
+            case "middle":
+                icon = "blue";
+                break;
+            case "high":
+                icon = "yellow";
+                break;
+            case "center":
+                icon = "green";
+                break;
+        }
+
+		var image = {
+			url: 'http://www.hcpss.org/f/mrb/icons/grad-cap-transparent-' + icon + '.png',
+			size: new google.maps.Size(32,30),
+			origin: new google.maps.Point(0,0),
+			anchor: new google.maps.Point(16,24),
+			scaledSize: new google.maps.Size(32,30)
+		}
 
     	var marker = new google.maps.Marker({
       		position: location,
