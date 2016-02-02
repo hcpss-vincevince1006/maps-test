@@ -1,0 +1,605 @@
+var schools = [
+
+	{
+		'name': 'Applications and Research Lab (ARL)', 
+		'lat': 39.234786, 'lng': -76.892495, 
+		'address': '10920 Clarksville Pike (Route 108), Ellicott City, MD 21042', 
+		'web': 'http://arl.hcpss.org/', 
+		'directions': 'https://www.google.com/maps/place/Applications+and+Research+Laboratory/@39.2349191,-76.8947807,17z/data=!3m1!4b1!4m2!3m1!1s0x89b7df61228ae963:0x7557056ab12cc472'
+	},
+
+	{
+		'name': 'Atholton Elementary School', 
+		'lat': 39.185933, 'lng':-76.862956, 
+		'address': '6700 Seneca Drive Columbia, MD 21046', 
+		'web': 'http://aes.hcpss.org/', 
+		'directions': 'https://maps.google.com?daddr=6700+Seneca+Drive+Columbia+MD+21046/'
+	},
+
+	{
+		'name': 'Atholton High School', 
+		'lat': 39.188227, 'lng':-76.880307, 
+		'address': '6520 Freetown Road, Columbia, MD 21044', 
+		'web': 'http://ahs.hcpss.org/', 
+		'directions': 'https://maps.google.com?daddr=6520+Freetown+Road+Columbia+MD+21044/'
+	},
+	
+	{
+		'name': 'Bellows Spring Elementary School', 
+		'lat': 39.204349, 'lng': -76.787022, 
+		'address': '8125 Old Stockbridge Road, Ellicott City, MD 21043', 
+		'web': 'http://bses.hcpss.org/', 
+		'directions': 'https://maps.google.com?daddr=8125+Old+Stockbridge+Road+Ellicott+City+MD+21043/'
+	},
+	
+	{
+		'name': 'Bollman Bridge Elementary School', 
+		'lat': 39.145906, 'lng': -76.827573, 
+		'address': '8200 Savage-Guilford Road, Jessup, MD 20794', 
+		'web': 'http://bbes.hcpss.org/', 
+		'directions': 'https://www.google.com/maps/place/8200+Savage+Guilford+Rd,+Jessup,+MD+20794/'
+	},
+	
+	{
+		'name': 'Bonnie Branch Middle School', 
+		'lat': 39.231462, 'lng': -76.772347, 
+		'address': '4979 Ilchester Road Ellicott City, MD 21043', 
+		'web': 'http://bbms.hcpss.org/', 
+		'directions': 'https://maps.google.com?daddr=4979+Ilchester+Road+Ellicott+City+MD+21043/'
+	},
+
+	{
+		'name': 'Burleigh Manor Middle School', 
+		'lat': 39.254488, 'lng': -76.866564, 
+		'address': '4200 Centennial Lane, Ellicott City, MD 21042', 
+		'web': 'http://bmms.hcpss.org/', 
+		'directions': 'https://www.google.com/maps?f=q&hl=en&q=4200+Centennial+Lane,+Ellicott+City,+MD+21042&ie=UTF8&z=15&om=1&iwloc=addr'
+	},
+
+	{
+		'name': 'Bushy Park Elementary School', 
+		'lat': 39.301616, 'lng': -77.022361, 
+		'address': '14601 Carrs Mill Road, Glenwood, MD 21738', 
+		'web': 'http://bpes.hcpss.org/', 
+		'directions': 'https://www.google.com/maps/place/BUSHY+PARK+ELEMENTARY+SCHOOL,+14601+Carrs+Mill+Rd,+Glenwood,+MD+21738/'
+	},
+
+	{
+		'name': 'Cedar Lane School', 
+		'lat': 39.155754, 'lng': -76.915238, 
+		'address': '11630 Scaggsville Road, Fulton, MD 20759', 
+		'web': 'http://cls.hcpss.org/', 
+		'directions': 'https://www.google.com/maps/place/Cedar+Lane+School/@39.1552563,-76.9175863,17z/data=!4m2!3m1!1s0x89b7dc011da27587:0xde0a514b872c1f96'
+	},
+
+	{
+		'name': 'Centennial High School', 
+		'lat': 39.252892, 'lng': -76.868602, 
+		'address': '4300 Centennial Ln, Ellicott City, MD 21042', 
+		'web': 'http://chs.hcpss.org/', 
+		'directions': 'https://www.google.com/maps/place/Centennial+High+School/@39.2529061,-76.8708201,17z/data=!3m1!4b1!4m2!3m1!1s0x89c820604e1a9207:0xb6b2d1c00662a6d5?hl=en'
+	},
+
+	{
+		'name': 'Centennial Lane Elementary School', 
+		'lat': 39.265916, 'lng': -76.861906, 
+		'address': '3825 Centennial Lane, Ellicott City, MD 21042', 
+		'web': 'http://cles.hcpss.org/', 
+		'directions': 'https://www.google.com/maps/place/Centennial+Lane+Elementary+School/@39.2657319,-76.8640137,17z/data=!3m1!4b1!4m2!3m1!1s0x89c8205a9579d1b3:0xf44b8411e693425d?hl=en'
+	},
+
+	{
+		'name': 'Clarksville Elementary School', 
+		'lat': 39.218947, 'lng': -76.930026, 
+		'address': '12041 MD-108, Clarksville, MD 21029', 
+		'web': 'http://ces.hcpss.org/', 
+		'directions': 'https://www.google.com/maps/place/Clarksville+Elementary+School/@39.2185815,-76.9312831,17z/data=!3m1!4b1!4m2!3m1!1s0x89b7d8c62618b7ff:0x9fe19ada2dc196d6'
+	},	
+
+	{
+		'name': 'Clarksville Middle School', 
+		'lat': 39.190240, 'lng': -76.924292, 
+		'address': '6535 South Trotter Road, Clarksville, MD 21029', 
+		'web': 'http://cms.hcpss.org/', 
+		'directions': 'https://www.google.com/maps/place/6535+S+Trotter+Rd,+Clarksville,+MD+21029/@39.1903318,-76.9255098,18.09z/data=!4m2!3m1!1s0x89b7d931f9fac4e9:0xfaca6a2c39a13540?hl=en'
+	},
+
+	{
+		'name': 'Clemens Crossing Elementary School', 
+		'lat': 39.194045, 'lng': -76.872697, 
+		'address': '10320 Quarterstaff Road, Columbia, MD 21044', 
+		'web': 'http://cces.hcpss.org/', 
+		'directions': 'https://www.google.com/maps/place/Clemens+Crossing+Elementary+School/@39.1940978,-76.8749643,17z/data=!3m1!4b1!4m2!3m1!1s0x89b7deff8da0fd95:0x8f3ac570b63acf56?hl=en'
+	},
+	
+	{
+		'name': 'Cradlerock Elementary School', 
+		'lat': 39.1914975, 'lng': -76.8458019, 
+		'address': '6700 Cradlerock Way, Columbia, MD 21045', 
+		'web': 'http://cres.hcpss.org/', 
+		'directions': 'https://www.google.com/maps/place/6700+Cradlerock+Way,+Columbia,+MD+21045/'
+	},
+	
+	{
+		'name': 'Dayton Oaks Elementary School', 
+		'lat': 39.240887, 'lng': -76.983587, 
+		'address': '4691 Ten Oaks Road, Dayton, MD 21036', 
+		'web': 'http://does.hcpss.org/', 
+		'directions': 'https://maps.google.com?daddr=4691+Ten+Oaks+Road+Dayton+MD+21036/'
+	},
+
+	{
+		'name': 'Deep Run Elementary School', 
+		'lat': 39.184736, 'lng': -76.786707, 
+		'address': '6925 Old Waterloo Road, Elkridge, MD 21075', 
+		'web': 'http://dres.hcpss.org/', 
+		'directions': 'https://www.google.com/maps/place/Deep+Run+Elementary+School/@39.184865,-76.7889335,17z/data=!3m1!4b1!4m2!3m1!1s0x89b7e0f8a96bd41b:0xd430bed4ad48fc9d?hl=en'
+	},
+
+	{
+		'name': 'Ducketts Lane Elementary School', 
+		'lat': 39.201342, 'lng': -76.745475, 
+		'address': '6501 Ducketts Lane, Elkridge, MD 21075', 
+		'web': 'http://dles.hcpss.org/', 
+		'directions': 'https://www.google.com/maps/place/Ducketts+Lane+Elementary+School/@39.2014354,-76.7479533,17z/data=!3m1!4b1!4m2!3m1!1s0x89b7e192ad061757:0x5d5d143dadf11c40'
+	},
+
+	{
+		'name': 'Dunloggin Middle School', 
+		'lat': 39.256180, 'lng': -76.833173, 
+		'address': '9129 Northfield Road, Ellicott City, MD 21042', 
+		'web': 'http://dms.hcpss.org/', 
+		'directions': 'https://www.google.com/maps/place/Dunloggin+Middle+School/@39.2564992,-76.8343849,17z/data=!3m1!4b1!4m2!3m1!1s0x89c820212b1ddd77:0x9ee691c56e075e85?hl=en'
+	},
+
+	{
+		'name': 'Elkridge Elementary School', 
+		'lat': 39.213211, 'lng': -76.728596, 
+		'address': '7075 Montgomery Road, Elkridge, MD 21075', 
+		'web': 'http://ees.hcpss.org/', 
+		'directions': 'https://www.google.com/maps/place/Elkridge+Elementary+School/@39.2136708,-76.7310896,17z/data=!3m1!4b1!4m2!3m1!1s0x89b7e203f29e49b7:0x1cbbf9d3b3452700?hl=en'
+	},
+
+	{
+		'name': 'Elkridge Landing Middle School', 
+		'lat': 39.212319, 'lng': -76.729290, 
+		'address': '7085 Montgomery Road, Elkridge, MD 21075', 
+		'web': 'http://elms.hcpss.org/', 
+		'directions': 'https://www.google.com/maps/place/Elkridge+Landing+Middle+School/@39.2123227,-76.7314783,17z/data=!3m1!4b1!4m2!3m1!1s0x89b7e2039bb6f6cf:0x8275349c08cd7fa7?hl=en'
+	},
+
+	{
+		'name': 'Ellicott Mills Middle School', 
+		'lat': 39.249663, 'lng': -76.810371, 
+		'address': '4445 Montgomery Road, Ellicott City, MD 21043', 
+		'web': 'http://emms.hcpss.org/', 
+		'directions': 'https://www.google.com/maps/place/Ellicott+Mills+Middle+School/@39.2500543,-76.8128507,17z/data=!3m1!4b1!4m2!3m1!1s0x89c81f933420327d:0x6a21605880b8c84a?hl=en'
+	},
+
+	{
+		'name': 'Folly Quarter Middle School', 
+		'lat': 39.266196, 'lng': -76.983776, 
+		'address': '13500 Triadelphia Road, Ellicott City, MD 21042', 
+		'web': 'http://fqms.hcpss.org/', 
+		'directions': 'https://www.google.com/maps/place/Folly+Quarter+Middle+School/@39.2662132,-76.9857204,17z/data=!3m1!4b1!4m2!3m1!1s0x89c827969096d4d9:0x15c154b953ee026?hl=en'
+	},
+
+	{
+		'name': 'Forest Ridge Elementary School', 
+		'lat': 39.134993, 'lng': -76.840064, 
+		'address': '9550 Gorman Road, Laurel, MD 20723', 
+		'web': 'http://fres.hcpss.org/', 
+		'directions': 'https://www.google.com/maps/place/Forest+Ridge+Elementary+School/@39.1356833,-76.8418058,17z/data=!3m1!4b1!4m2!3m1!1s0x89b7ddec2506eebb:0xe48026f1c8649407?hl=en'
+	},
+
+	{
+		'name': 'Fulton Elementary School', 
+		'lat': 39.151079, 'lng': -76.9180995, 
+		'address': '11600 Scaggsville Road, Fulton, MD 20759', 
+		'web': 'http://fes.hcpss.org/', 
+		'directions': 'https://www.google.com/maps/place/Fulton+Elementary+School/@39.151079,-76.9180995,17z/data=!3m1!4b1!4m2!3m1!1s0x89b7dc0637b74f2d:0xe3ba70dd7f60ee19?hl=en'
+	},
+
+	{
+		'name': 'Glenelg High School', 
+		'lat': 39.274881, 'lng': -77.003149, 
+		'address': '14025 Burntwoods Road, Glenelg, MD 21737', 
+		'web': 'http://ghs.hcpss.org/', 
+		'directions': 'https://www.google.com/maps/place/Glenelg+High+School/@39.2748623,-77.0054929,17z/data=!3m1!4b1!4m2!3m1!1s0x89c827c352aede7f:0xc60c42aa9e46c3b?hl=en'
+	},
+
+	{
+		'name': 'Glenwood Middle School', 
+		'lat': 39.297481, 'lng': -77.024241, 
+		'address': '2680 Route 97, Glenwood, MD 21738', 
+		'web': 'http://gms.hcpss.org/', 
+		'directions': 'https://www.google.com/maps/place/2680+MD-97,+Glenwood,+MD+21738/@39.2974854,-77.0264298,17z/data=!3m1!4b1!4m2!3m1!1s0x89c828891da237c9:0xc42b78cf5db4c5fc?hl=en'
+	},	
+
+	{
+		'name': 'Gorman Crossing Elementary School', 
+		'lat': 39.144929, 'lng': -76.858807, 
+		'address': '9999 Winter Sun Road, Laurel, MD 20723', 
+		'web': 'http://gces.hcpss.org/', 
+		'directions': 'https://www.google.com/maps/place/Gorman+Crossing+Elementary/@39.1450725,-76.8609523,17z/data=!4m2!3m1!1s0x89b7ddda8b3594c3:0x7231fea407e39d71?hl=en'
+	},
+
+	{
+		'name': 'Guilford Elementary School', 
+		'lat': 39.169782, 'lng': -76.829957, 
+		'address': '7335 Oakland Mills Road, Columbia, MD 21046', 
+		'web': 'http://ges.hcpss.org/', 
+		'directions': 'https://www.google.com/maps/place/Guilford+Elementary+School/@39.1697859,-76.8321456,17z/data=!3m1!4b1!4m2!3m1!1s0x89b7de21e8ca9a03:0x22477607078b647a?hl=en'
+	},
+
+	{
+		'name': 'Hammond Elementary School', 
+		'lat': 39.148098, 'lng': -76.878709, 
+		'address': '8110 Aladdin Drive, Laurel, MD 20723', 
+		'web': 'http://hes.hcpss.org/', 
+		'directions': 'https://www.google.com/maps/place/Hammond+Elementary+School/@39.1482806,-76.8807562,17z/data=!3m1!4b1!4m2!3m1!1s0x89b7dc2ea8ef9d21:0x87e8189a19bd78a2?hl=en'
+	},
+
+	{
+		'name': 'Hammond Middle School', 
+		'lat': 39.147458, 'lng': -76.878698, 
+		'address': '8110 Aladdin Drive, Laurel, MD 20723', 
+		'web': 'http://hms.hcpss.org/', 
+		'directions': 'https://www.google.com/maps/place/Hammond+Middle+School/@39.1483504,-76.8808377,17z/data=!3m1!4b1!4m2!3m1!1s0x89b7dc2ea8ef9d21:0x4025e92413737244'
+	},
+
+	{
+		'name': 'Hammond High School', 
+		'lat': 39.167666, 'lng': -76.860485, 
+		'address': '8800 Guilford Road, Columbia, MD 21046', 
+		'web': 'http://hahs.hcpss.org/', 
+		'directions': 'https://www.google.com/maps/place/Hammond+High+School/@39.1678898,-76.8628809,17z/data=!3m1!4b1!4m2!3m1!1s0x89b7de68b135848f:0xea138e5c7c39dad?hl=en'
+	},
+
+	{
+		'name': 'Harper’s Choice Middle School', 
+		'lat': 39.224474, 'lng': -76.887581, 
+		'address': '5450 Beaverkill Road, Columbia, MD 21044', 
+		'web': 'http://hcms.hcpss.org/', 
+		'directions': 'https://www.google.com/maps/place/Harpers+Choice+Middle+School/@39.2247178,-76.8887961,18z/data=!4m2!3m1!1s0x89b7df6e8371d879:0xc96b7c405c7391ce?hl=en'
+	},
+
+	{
+		'name': 'Hollifield Station Elementary School', 
+		'lat': 39.302492, 'lng': -76.817750, 
+		'address': '8701 Stonehouse Drive, Ellicott City, MD 21043', 
+		'web': 'http://hses.hcpss.org/', 
+		'directions': 'https://www.google.com/maps/place/Hollifield+Station+Elementary/@39.3024964,-76.8199388,17z/data=!3m1!4b1!4m2!3m1!1s0x89c81f505c39a777:0x14b91f65767f938b?hl=en'
+	},
+
+	{
+		'name': 'Homewood Center', 
+		'lat': 39.237129, 'lng': -76.890521, 
+		'address': '10914 Clarksville Pike (Route 108), Ellicott City, MD 21042', 
+		'web': 'http://hc.hcpss.org/', 
+		'directions': 'https://www.google.com/maps/place/Homewood+Center/@39.2371145,-76.8929245,17z/data=!3m1!4b1!4m2!3m1!1s0x89b7df613d60103d:0x4b4608b81ae6c6e9?hl=en'
+	},
+
+	{
+		'name': 'Howard High School', 
+		'lat': 39.226067, 'lng': -76.812130, 
+		'address': '8700 Old Annapolis Road, Ellicott City, MD 21043', 
+		'web': 'http://hohs.hcpss.org/', 
+		'directions': 'https://www.google.com/maps/place/Howard+High+School/@39.2261451,-76.8137564,17z/data=!3m1!4b1!4m2!3m1!1s0x89b7e01cbb9fce7f:0xe1cbfc15350a797f?hl=en'
+	},
+
+	{
+		'name': 'Ilchester Elementary School', 
+		'lat': 39.231139, 'lng': -76.773864, 
+		'address': '4981 Ilchester Road, Ellicott City, MD 21043', 
+		'web': 'http://ies.hcpss.org/', 
+		'directions': 'https://www.google.com/maps/place/4981+Ilchester+Rd,+Ellicott+City,+MD+21043/@39.2311429,-76.7760582,17z/data=!3m1!4b1!4m2!3m1!1s0x89c81e2c27a7b5c1:0xb8a180cf969b526b?hl=en'
+	},
+
+	{
+		'name': 'Jeffers Hill Elementary School', 
+		'lat': 39.205486, 'lng': -76.826295, 
+		'address': '6001 Tamar Drive, Columbia, MD 21045', 
+		'web': 'http://jhes.hcpss.org/', 
+		'directions': 'https://www.google.com/maps/place/Jeffers+Hill+Elementary+School/@39.2054858,-76.8284834,17z/data=!3m1!4b1!4m2!3m1!1s0x89b7dfd8afdbd3e3:0x1fc082d03a6b38e4?hl=en'
+	},
+
+	{
+		'name': 'Lake Elkhorn Middle School', 
+		'lat': 39.1914975, 'lng':-76.8466, 
+		'address': '6700 Cradlerock Way, Columbia, MD 21045', 
+		'web': 'http://lems.hcpss.org/', 
+		'directions': 'https://www.google.com/maps/place/Lake+Elkhorn+Middle+School/@39.1918436,-76.8451647,17z/data=!3m1!4b1!4m2!3m1!1s0x89b7dfcb4cd74a8f:0x413379eedb15b501?hl=en'
+	},	
+	
+	{
+		'name': 'Laurel Woods Elementary School', 
+		'lat': 39.117626, 'lng': -76.842012, 
+		'address': '9250 North Laurel Road, Laurel, MD 20723', 
+		'web': 'http://lwes.hcpss.org/', 
+		'directions': 'https://www.google.com/maps/place/Laurel+Woods+Elementary+School/@39.117629,-76.8442097,17z/data=!3m1!4b1!4m2!3m1!1s0x89b7dd9bdefcd06d:0x57165b6f87a02f7c?hl=en'
+	},
+
+	{
+		'name': 'Lime Kiln Middle School', 
+		'lat': 39.154465, 'lng': -76.915555, 
+		'address': '11650 Scaggsville Road, Fulton, MD 20759', 
+		'web': 'http://lkms.hcpss.org/', 
+		'directions': 'https://www.google.com/maps/place/11650+Scaggsville+Rd,+Fulton,+MD+20759/'
+	},	
+
+	{
+		'name': 'Lisbon Elementary School', 
+		'lat': 39.333652, 'lng': -77.069095, 
+		'address': '15901 Frederick Road, Woodbine, MD 21797', 
+		'web': 'http://les.hcpss.org/', 
+		'directions': 'https://www.google.com/maps/place/Lisbon+Elementary+School/@39.3334654,-77.0694082,18z/data=!4m2!3m1!1s0x89c82931f163e8cd:0xbaa851cede136dcb?hl=en'
+	},
+
+	{
+		'name': 'Long Reach High School', 
+		'lat': 39.205963, 'lng': -76.811131, 
+		'address': '6101 Old Dobbin Lane, Columbia, MD 21045', 
+		'web': 'http://lrhs.hcpss.org/', 
+		'directions': 'https://www.google.com/maps/place/Long+Reach+High+School/@39.2058925,-76.8133125,17z/data=!3m1!4b1!4m2!3m1!1s0x89b7e06d179ea171:0x76e9eae64a6033b6?hl=en'
+	},	
+
+	{
+		'name': 'Longfellow Elementary School', 
+		'lat': 39.226520, 'lng': -76.881670, 
+		'address': '5470 Hesperus Drive, Columbia, MD 21044', 
+		'web': 'http://loes.hcpss.org/', 
+		'directions': 'https://www.google.com/maps/place/Longfellow+Elementary+School/@39.2265099,-76.8837913,17z/data=!3m1!4b1!4m2!3m1!1s0x89b7df703ebcb6bf:0xc8dd4d7eaed93d80?hl=en'
+	},	
+
+	{
+		'name': 'Manor Woods Elementary School', 
+		'lat': 39.290171, 'lng': -76.913382, 
+		'address': '11575 Frederick Road, Ellicott City, MD 21042', 
+		'web': 'http://mwes.hcpss.org/', 
+		'directions': 'https://www.google.com/maps/place/Manor+Woods+Elementary+School/@39.2901709,-76.9155706,17z/data=!3m1!4b1!4m2!3m1!1s0x89c8212dd9efb11d:0x57d75bf34c0a65c6?hl=en'
+	},
+
+	{
+		'name': 'Marriotts Ridge High School', 
+		'lat': 39.321717, 'lng': -76.933887, 
+		'address': '12100 Woodford Drive, Marriottsville, MD 21104', 
+		'web': 'http://mrhs.hcpss.org/', 
+		'directions': 'https://www.google.com/maps/place/Marriotts+Ridge+High+School/@39.3217288,-76.9362422,17z/data=!3m1!4b1!4m2!3m1!1s0x89c826a73c9499c1:0x9e54bfebf148102e?hl=en'
+	},
+
+	{
+		'name': 'Mayfield Woods Middle School', 
+		'lat': 39.197849, 'lng': -76.785996, 
+		'address': '7950 Red Barn Way, Elkridge, MD 21075', 
+		'web': 'http://mwms.hcpss.org/', 
+		'directions': 'https://www.google.com/maps/place/Mayfield+Woods+Middle+School/@39.1976236,-76.7886834,17z/data=!3m1!4b1!4m2!3m1!1s0x89b7e04e0bb7fa83:0xf6c700ddf00853a6?hl=en'
+	},
+
+	{
+		'name': 'Mount Hebron High School', 
+		'lat': 39.298695, 'lng': -76.840439, 
+		'address': '9440 Old Frederick Road (Route 99), Ellicott City, MD 21042', 
+		'web': 'http://mhhs.hcpss.org/', 
+		'directions': 'https://www.google.com/maps/place/Mount+Hebron+High+School/@39.2988257,-76.8426196,17z/data=!3m1!4b1!4m2!3m1!1s0x89c821eed5686fd9:0x9e82f055d4aa6e6a?hl=en'
+	},
+
+	{
+		'name': 'Mount View Middle School', 
+		'lat': 39.320918, 'lng': -76.936788, 
+		'address': '12101 Woodford Drive, Marriottsville, MD 21104', 
+		'web': 'http://mvms.hcpss.org/', 
+		'directions': 'https://www.google.com/maps/place/Mount+View+Middle+School/@39.3208815,-76.9390008,17z/data=!3m1!4b1!4m2!3m1!1s0x89c826a6a93b64c9:0x3b1646aa05aa034c?hl=en'
+	},
+
+	{
+		'name': 'Murray Hill Middle School', 
+		'lat': 39.145179, 'lng': -76.857626, 
+		'address': '9989 Winter Sun Road, Laurel, MD 20723', 
+		'web': 'http://mhms.hcpss.org/', 
+		'directions': 'https://www.google.com/maps/place/9989+Winter+Sun+Rd,+Laurel,+MD+20723/@39.1454008,-76.8599675,17z/data=!3m1!4b1!4m2!3m1!1s0x89b7ddda53699443:0xf0d80db642ae836a?hl=en'
+	},
+
+	{
+		'name': 'Northfield Elementary School', 
+		'lat': 39.256223, 'lng': -76.830053, 
+		'address': '9125 Northfield Road, Ellicott City, MD 21042', 
+		'web': 'http://nes.hcpss.org/', 
+		'directions': 'https://www.google.com/maps/place/Northfield+Elementary+School/@39.2560865,-76.832242,17z/data=!3m1!4b1!4m2!3m1!1s0x89c820212b1df835:0xb44d634e14cac34d?hl=en'
+	},
+
+	{
+		'name': 'Oakland Mills High School', 
+		'lat': 39.208812, 'lng': -76.839040, 
+		'address': '9410 Kilimanjaro Road, Columbia, MD 21045', 
+		'web': 'http://omhs.hcpss.org/', 
+		'directions': 'https://www.google.com/maps/place/Oakland+Mills+High+School/@39.2088678,-76.8411684,17z/data=!3m1!4b1!4m2!3m1!1s0x89b7dfc338fe0b41:0x28128f86cf2643df?hl=en'
+	},
+
+	{
+		'name': 'Oakland Mills Middle School', 
+		'lat': 39.207107, 'lng': -76.844902, 
+		'address': '9540 Kilimanjaro Road, Columbia, MD 21045', 
+		'web': 'http://omms.hcpss.org/', 
+		'directions': 'https://www.google.com/maps/place/Oakland+Mills+Middle+School/@39.2070331,-76.8472487,17z/data=!3m1!4b1!4m2!3m1!1s0x89b7dfc6bac9786f:0xd240152235bdd20a?hl=en'
+	},
+
+	{
+		'name': 'Patapsco Middle School', 
+		'lat': 39.298081, 'lng': -76.817071, 
+		'address': '8885 Old Frederick Road, Ellicott City, MD 21043', 
+		'web': 'http://omms.hcpss.org/', 
+		'directions': 'https://www.google.com/maps/place/Patapsco+Middle+School/@39.2980327,-76.8192964,17z/data=!3m1!4b1!4m2!3m1!1s0x89c81f5a8c849b77:0x2ff99c34df47efa4?hl=en'
+	},
+
+	{
+		'name': 'Patuxent Valley Middle School', 
+		'lat': 39.146943, 'lng': -76.828122, 
+		'address': '9151 Vollmerhausen Road, Jessup, MD 20794', 
+		'web': 'http://pvms.hcpss.org/', 
+		'directions': 'https://www.google.com/maps/place/Patuxent+Valley+Middle+School/@39.1469075,-76.8304729,17z/data=!3m1!4b1!4m2!3m1!1s0x89b7ddfe4bf6694f:0x7160e73abe4c55d7?hl=en'
+	},
+
+	{
+		'name': 'Phelps Luck Elementary School', 
+		'lat': 39.222186, 'lng': -76.818224, 
+		'address': '5370 Oldstone Court, Columbia, MD 21045', 
+		'web': 'http://ples.hcpss.org/', 
+		'directions': 'https://www.google.com/maps/place/Phelps+Luck+Elementary+School/@39.217782,-76.820529,15z/data=!4m2!3m1!1s0x0:0xba694a350741e2b5?hl=en-US'
+	},
+
+	{
+		'name': 'Pointers Run Elementary School', 
+		'lat': 39.190853, 'lng': -76.926336, 
+		'address': '6600 South Trotter Road, Clarksville, MD 21029', 
+		'web': 'http://pres.hcpss.org/', 
+		'directions': 'https://www.google.com/maps/place/POINTERS+RUN+ELEMENTARY+SCHOOL/@39.1907011,-76.9280988,17z/data=!3m1!4b1!4m2!3m1!1s0x89b7d931bfb86cbf:0x30ebed15572abf8?hl=en'
+	},
+
+	{
+		'name': 'Reservoir High School', 
+		'lat': 39.1515161, 'lng': -76.911724, 
+		'address': '11550 Scaggsville Road, Fulton, MD 20759', 
+		'web': 'http://rhs.hcpss.org/', 
+		'directions': 'https://www.google.com/maps/place/Reservoir+High+School/@39.156911,-76.911724,15z/data=!4m2!3m1!1s0x0:0x7163e0d4907d6f22?hl=en-US'
+	},
+
+	{
+		'name': 'River Hill High School', 
+		'lat': 39.2150412, 'lng': -76.9310742, 
+		'address': '12101 Clarksville Pike (Route 108), Clarksville, MD 21029', 
+		'web': 'http://rhhs.hcpss.org/', 
+		'directions': 'https://www.google.com/maps/place/River+Hill+High+School/@39.2150412,-76.9310742,17z/data=!3m1!4b1!4m2!3m1!1s0x89b7d8c6743d3401:0x17605a497b0a892c?hl=en'
+	},
+
+	{
+		'name': 'Rockburn Elementary School', 
+		'lat': 39.214944, 'lng': -76.768467, 
+		'address': '6145 Montgomery Road, Elkridge, MD 21075', 
+		'web': 'http://res.hcpss.org/', 
+		'directions': 'https://www.google.com/maps/place/Rockburn+Elementary+School/@39.215107,-76.7704937,17z/data=!3m1!4b1!4m2!3m1!1s0x89b7e1d00e9e0271:0x64d0e21fad28ee58?hl=en'
+	},
+
+	{
+		'name': 'Running Brook Elementary School', 
+		'lat': 39.228860, 'lng': -76.857535, 
+		'address': '5215 W. Running Brook Road, Columbia, MD 21044', 
+		'web': 'http://rbes.hcpss.org/', 
+		'directions': 'https://www.google.com/maps/place/Running+Brook+Elementary+School/@39.2288301,-76.8597167,17z/data=!3m1!4b1!4m2!3m1!1s0x89b7df8f37e781ab:0xdcd616f7b08843b1?hl=en'
+	},
+
+	{
+		'name': 'St. John’s Lane Elementary School', 
+		'lat': 39.290497, 'lng': -76.833304, 
+		'address': '2960 St. John’s Lane, Ellicott City, MD 21042', 
+		'web': 'http://sjles.hcpss.org/', 
+		'directions': 'https://www.google.com/maps/place/Saint+Johns+Lane+Elementary+School/@39.2904753,-76.8356276,17z/data=!3m1!4b1!4m2!3m1!1s0x89c821ddb3c855e9:0xeb870c75494859a6?hl=en'
+	},
+
+	{
+		'name': 'Stevens Forest Elementary School', 
+		'lat': 39.204779, 'lng': -76.845005, 
+		'address': '6045 Stevens Forest Road, Columbia, MD 21045', 
+		'web': 'http://sfes.hcpss.org/', 
+		'directions': 'https://www.google.com/maps/place/Stevens+Forest+Elementary+School/@39.2048291,-76.8471678,17z/data=!3m1!4b1!4m2!3m1!1s0x89b7dfc6f58d3edb:0x99c299478e0e35be?hl=en'
+	},
+
+	{
+		'name': 'Swansfield Elementary School', 
+		'lat': 39.216777, 'lng': -76.888656, 
+		'address': '5610 Cedar Lane, Columbia, MD 21044', 
+		'web': 'http://ses.hcpss.org/', 
+		'directions': 'https://www.google.com/maps/place/Swansfield+Elementary+School/@39.2167658,-76.8908674,17z/data=!3m1!4b1!4m2!3m1!1s0x89b7df6cb5f6086f:0x8325acd44e76bb40?hl=en'
+	},
+
+	{
+		'name': 'Talbott Springs Elementary School', 
+		'lat': 39.213034, 'lng': -76.843607, 
+		'address': '9550 Basket Ring Road, Columbia, MD 21045', 
+		'web': 'http://tses.hcpss.org/', 
+		'directions': 'https://www.google.com/maps/place/Talbott+Springs+Elementary+School/@39.2130385,-76.8458009,17z/data=!3m1!4b1!4m2!3m1!1s0x89b7dfea035b3841:0xdd2a5aacf1a6de72?hl=en'
+	},
+
+	{
+		'name': 'Thomas Viaduct Middle School', 
+		'lat': 39.184450, 'lng': -76.735460, 
+		'address': '7000 Banbury Drive Hanover, MD 21076', 
+		'web': 'http://tvms.hcpss.org/', 
+		'directions': 'https://maps.google.com?daddr=7000+Banbury+Drive+Hanover+MD+21076/'
+	},
+
+	{
+		'name': 'Thunder Hill Elementary School', 
+		'lat': 39.229012, 'lng': -76.834327, 
+		'address': '9357 Mellenbrook Road, Columbia, MD 21045', 
+		'web': 'http://thes.hcpss.org/', 
+		'directions': 'https://www.google.com/maps/place/Thunder+Hill+Elementary+School/@39.2290071,-76.8366589,17z/data=!3m1!4b1!4m2!3m1!1s0x89b7dff84ace32ed:0x2fac99235e97ac4d?hl=en'
+	},
+
+	{
+		'name': 'Triadelphia Ridge Elementary School', 
+		'lat': 39.266108, 'lng': -76.979249, 
+		'address': '13400 Triadelphia Road, Ellicott City, MD 21042', 
+		'web': 'http://tres.hcpss.org/', 
+		'directions': 'https://www.google.com/maps/place/Triadelphia+Ridge+Elementary+School/@39.2605384,-77.0395671,12.35z/data=!4m2!3m1!1s0x89c82795c3f49783:0xeda95d1fd20c34ac?hl=en'
+	},
+	
+	{
+		'name': 'Veterans Elementary School', 
+		'lat': 39.253896, 'lng': -76.812994, 
+		'address': '4355 Montgomery Road, Ellicott City, MD 21043', 
+		'web': 'http://ves.hcpss.org/', 
+		'directions': 'https://www.google.com/maps/place/Veterans+Elementary+School/@39.2540295,-76.815074,17z/data=!3m1!4b1!4m2!3m1!1s0x89c81f92be101651:0x555626949051e205?hl=en'
+	},
+
+	{
+		'name': 'Waterloo Elementary School', 
+		'lat': 39.207376, 'lng': -76.797672, 
+		'address': '5940 Waterloo Road, Columbia, MD 21045', 
+		'web': 'http://wates.hcpss.org/', 
+		'directions': 'https://www.google.com/maps/place/5940+Waterloo+Rd,+Columbia,+MD+21045/@39.2073805,-76.7998664,17z/data=!3m1!4b1!4m2!3m1!1s0x89b7e03f513ff927:0xbc86b15b40bd8666?hl=en'
+	},
+
+	{
+		'name': 'Waverly Elementary School', 
+		'lat': 39.207376, 'lng': -76.797672, 
+		'address': '10220 Wetherburn Road, Ellicott City, MD 21042', 
+		'web': 'http://waves.hcpss.org/', 
+		'directions': 'https://www.google.com/maps/place/Waverly+Elementary+School/@39.3048169,-76.8709321,17z/data=!3m1!4b1!4m2!3m1!1s0x89c8219c40c6e82d:0xc36e30527a852d74?hl=en'
+	},
+
+
+	{
+		'name': 'West Friendship Elementary School', 
+		'lat': 39.301494, 'lng': -76.9458105, 
+		'address': '12500 Frederick Road, West Friendship, MD 21794', 
+		'web': 'http://wfes.hcpss.org/', 
+		'directions': 'https://maps.google.com?daddr=12500+Frederick+Road+West+Friendship+MD+21794/'
+	},
+
+	{
+		'name': 'Wilde Lake High School', 
+		'lat': 39.217301, 'lng': -76.872701, 
+		'address': '5460 Trumpeter Road, Columbia, MD 21044', 
+		'web': 'http://wlhs.hcpss.org/', 
+		'directions': 'https://www.google.com/maps/place/5460+Trumpeter+Rd,+Columbia,+MD+21044/@39.217301,-76.8748895,17z/data=!3m1!4b1!4m2!3m1!1s0x89b7df7565b70f9f:0xc18eaddca2fb601b?hl=en'
+	},
+
+
+	{
+		'name': 'Wilde Lake Middle School', 
+		'lat': 39.217968, 'lng': -76.876505, 
+		'address': '10481 Cross Fox Lane, Columbia, MD 21044', 
+		'web': 'http://wlms.hcpss.org/', 
+		'directions': 'https://www.google.com/maps/place/Wilde+Lake+Middle+School/@39.2179891,-76.8786983,17z/data=!3m1!4b1!4m2!3m1!1s0x89b7df7438f39bad:0x54be4cbc7eb841bb?hl=en'
+	},
+
+	{
+		'name': 'Worthington Elementary School', 
+		'lat': 39.217968, 'lng': -76.876505, 
+		'address': '14570 Roundhill Road, Ellicott City, MD 21043', 
+		'web': 'http://woes.hcpss.org/', 
+		'directions': 'https://www.google.com/maps/place/Wilde+Lake+Middle+School/@39.2179891,-76.8786983,17z/data=!3m1!4b1!4m2!3m1!1s0x89b7df7438f39bad:0x54be4cbc7eb841bb?hl=en'
+	},
+
+]

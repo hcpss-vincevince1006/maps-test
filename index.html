@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+
+
+        <title>Google Maps API Stuff</title>
+    
+        <!-- Stylesheets -->
+
+        <link rel="stylesheet" type='text/css' href="http://s3.amazonaws.com/hcpss.web.site/images/normalize.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+        <link rel="stylesheet" media="screen" href="css/styles.css">
+        <link rel="stylesheet" type="text/css" href="http://s3.amazonaws.com/hcpss.web.site/fonts/fira.css" >
+        <link rel="stylesheet" type="text/css" href="http://s3.amazonaws.com/hcpss.web.site/images/hcpss-2015-12-03a.min.css" >
+    </head>
+    <body>
+<div class="header group">
+  <div class="header-inner group" itemscope itemtype="http://schema.org/Organization">
+    <div class="logomark">
+      <a href="/"><img itemprop="logo" class="logo shadow-smaller"
+       src="http://s3.amazonaws.com/hcpss.web.site/images/hcpss-logo-outlined.png" height="60" width="60" alt="" /></a>
+      <h1><a href="/">Howard County Public School System</a></h1>
+    </div>
+    <div class="sm">
+      <link itemprop="url" href="http://www.hcpss.org/">
+      <ul class="social-media-icons group">
+        <li><a target="_blank" id="social-media-icon-twitter" href="https://twitter.com/hcpss/" itemprop="sameAs"><i class="fa fa-twitter-square fa-3"></i></a></li>
+        <li><a target="_blank" id="social-media-icon-facebook" href="https://www.facebook.com/hocoschools/" itemprop="sameAs"><i class="fa fa-facebook-square fa-3"></i></a></li>
+        <li><a target="_blank" id="social-media-icon-instagram" href="https://instagram.com/hocoschools/" itemprop="sameAs"><i class="fa fa-instagram fa-3"></i></a></li>
+        <li><a target="_blank" id="social-media-icon-vimeo" href="https://www.vimeo.com/hcpss/" itemprop="sameAs"><i class="fa fa-vimeo-square fa-3"></i></a></li>
+        <li><a target="_blank" id="social-media-icon-youtube" href="https://www.youtube.com/hcpsstv/" itemprop="sameAs"><i class="fa fa-youtube-square fa-3"></i></a></li>
+        <li><a target="_blank" id="social-media-icon-super-blog" href="https://superintendent.hcpss.org/"><img src="http://s3.amazonaws.com/hcpss.web.site/images/blog-icon.png" alt="Superintendent's Blog"></a></li>
+      </ul>
+    </div>
+  </div>
+
+<!--googleoff: index-->
+
+  <nav id="main-navigation">
+
+<ul id="main-navigation-menu">
+  <li id="nav-about"><span><a id="menu-about-toggle" href="/about-us/">About</a></span>
+    <div class="menu-drop" id="menu-about-drop">
+       <section>
+<div class="thirds">
+<ul>
+<li><a href="/board/">Board of Education</a></li>
+<li><a href="http://www.boarddocs.com/mabe/hcpssmd/Board.nsf/public">BoardDocs</a></li>
+<li><a href="/board/policies/">Policies</a></li>
+<li><a href="/board/ombudsman-services/">Ombudsman Services</a></li>
+<li><a href="/contact-us/">Contact Us</a></li>
+<li><a href="/about-us/public-information-requests/">Public Information Requests</a></li>
+</ul>
+</div>
+<div class="thirds">
+<ul>
+<li><a href="/about-us/superintendent/">Dr. Renee Foose, Superintendent</a></li>
+<li><a href="/vision/">Vision 2018</a></li>
+<!-- <li><a href="/vision/progress-report/">Progress Report on the Strategic Plan</a></li>  -->
+<li><a href="/about-us/annual-reports/">Annual Reports</a></li>
+<li><a href="/about-us/research-data-analysis/">Research and Data Analysis</a></li>
+</ul>
+</div>
+<div class="thirds">
+<ul>
+<li><a href="/employment/">Employment</a></li>
+<li><a href="/about-us/budgets/">Budget</a></li>
+<li><a href="/about-us/partnerships/">Partnerships</a></li>
+<li><a href="/about-us/purchasing/">Purchasing</a></li>
+<li><a href="/f/vendors/index.html">Fund Accountability &amp; Transparency</a></li>
+</ul>
+</div>
+
+
+       </section>
+    </div>
+  </li>
+  <li id="nav-schools"><span><a id="menu-schools-toggle" href="/schools/">Schools</a></span>
+    <div class="menu-drop" id="menu-schools-drop">
+      <section>
+<div class="thirds">
+<ul>
+<li><a href="/schools/elementary-schools/">Elementary Schools</a></li>
+<li><a href="/schools/middle-schools/">Middle Schools</a></li>
+<li><a href="/schools/high-schools/">High Schools</a></li>
+<li><a href="/schools/education-centers/">Education Centers</a></li>
+</ul>
+</div>
+<div class="thirds">
+<ul>
+<li><a href="/schools/emergency-closings/">Emergency Closings</a></li>
+<li><a href="/athletics/">Athletics</a></li>
+<li><a href="/athletics/weather-procedures/">Athletics Weather-Related Procedures</a></li>
+<li><a href="/athletics/contact/">Athletic Contacts</a></li>
+<li><a href="/athletics/forms-and-guidelines/">Athletics Forms</a></li>
+
+</ul>
+</div>
+<div class="thirds">
+<ul>
+<li><a href="/about-us/handbook/">Student Handbook</a></li>
+<li><a href="/schools/visitation/">Visiting Schools</a></li>
+<li><a href="/about-us/safe-schools/">Safe Schools</a></li>
+<li><a href="/school-planning/">School Planning (Maps)</a></li>
+<li><a href="/parents/facilities/">Use of School Facilites</a></li>
+
+</ul>
+</div>
+
+
+      </section>
+    </div>
+  </li>
+  <li id="nav-academics"><span><a id="menu-academics-toggle" href="/academics/">Academics</a></span>
+    <div class="menu-drop" id="menu-academics-drop">
+    <section>
+<div class="thirds">
+<ul>
+<li><a href="/academics/english-language-arts/">English/Language Arts</a></li>
+<li><a href="/academics/mathematics/">Mathematics</a></li>
+<li><a href="/academics/elementary-science/"> Science (Elementary)</a></li>
+<li><a href="/academics/secondary-science/">Science (Secondary)</a></li>
+<li><a href="/academics/elementary-social-studies/">Social Studies (Elementary)</a></li>
+<li><a href="/academics/secondary-social-studies/">Social Studies (Secondary)</a></li>
+</ul>
+</div>
+
+<div class="thirds">
+<ul>
+<li><a href="/academics/career-technology-education/">Career and Tech Education</a></li>
+<li><a href="/academics/digital-education/">Digital Education</a></li>
+<li><a href="/academics/esol/">ESOL</a></li>
+<li><a href="/academics/fine-arts/">Fine Arts</a></li>
+<li><a href="/academics/health-education/">Health Education</a></li>
+<li><a href="/academics/library-media/">Library Media</a></li>
+<li><a href="/academics/physical-education/">Physical Education</a></li>
+<li><a href="/academics/world-language-program/">World Languages</a></li>
+</ul>
+</div>
+
+<div class="thirds">
+<ul>
+<li><a href="/academics/alternative-education/">Alternative Education</a></li>
+<li><a href="/academics/elementary-school-model/">Elementary School Model</a></li>
+<li><a href="/academics/grow-strong-middle-schools/">Grow Strong Middle Schools</a></li>
+<li><a href="/academics/gifted-and-talented/">Gifted and Talented</a></li>
+<li><a href="/academics/instructional-technology/">Instructional Technology</a></li>
+<li><a href="/schools/kindergarten-registration/">Kindergarten Registration</a></li>
+<li><a href="/schools/pre-k-programs/">Pre-Kindergarten Programs</a></li>
+<li><a href="/academics/service-learning/">Service Learning</a></li>
+<li><a href="/academics/special-education/">Special Education</a></li>
+<li><a href="/academics/testing/">Testing</a></li>
+<li><a href="/academics/title-i-program/">Title I</a></li>
+</ul>
+
+</div>
+
+    </section>
+    </div>
+  </li>
+  <li id="nav-services"><span><a id="menu-services-toggle" href="/services/">Services</a></span>
+    <div class="menu-drop" id="menu-services-drop">
+      <section>
+<div class="thirds">       
+<ul>
+<li><a href="/schools/enrollment-and-registration/">Enrollment and Registration</a></li>
+<li><a href="/schools/transportation/">Transportation</a></li>
+<li><a href="/food-services/">Food and Nutrition Services</a></li>
+<li><a href="/schools/before-and-after-school-care/">Before and After Care</a></li>
+</ul>
+</div>
+<div class="thirds">       
+<ul>
+<li><a href="/special-education/">Special Education</a></li>
+<li><a href="/schools/health-services/">Health Services</a></li>
+<li><a href="/schools/counseling-services/">School Counseling Services</a></li>
+<li><a href="/schools/psychological-services/">Psychological Services</a></li>
+<li><a href="/schools/pupil-personnel-services/">Pupil Personnel Services</a></li>
+
+</ul>
+</div>
+<div class="thirds">       
+<ul>
+<li><a href="/languages/">International Services</a></li>
+<li><a href="/schools/academic-intervention/">Academic Intervention</a></li>
+<li><a href="/home-hospital-teaching/">Home and Hospital</a></li>
+</ul>
+</div>
+      </section>
+    </div>
+  </li>
+  <li id="nav-news"><span><a id="menu-news-toggle" href="/news/">News</a></span>
+    <div class="menu-drop" id="menu-news-drop">
+      <section>
+<div class="thirds">
+  <ul>
+  <li><a href="/news/">HCPSS News</a></li>
+  <li><a href="/news/press-release/">Press Releases</a></li>
+  <li><a href="/news/community-event/">Upcoming Events</a></li>
+  </ul>
+</div>
+<div class="thirds">
+<ul>
+  <li><a target="_blank" href="https://twitter.com/hcpss/">@HCPSS Twitter</a></li>
+  <li><a target="_blank" href="https://www.facebook.com/hocoschools/">Facebook</a></li>
+  <li><a target="_blank" href="/tv/">HCPSS TV</a></li>
+  <li><a target="_blank" href="https://superintendent.hcpss.org/">Superintendent's Corner</a></li>
+  <li><a target="_blank" href="https://twitter.com/superhcpss/">Dr. Foose on Twitter</a></li>
+</ul>
+</div>
+<div class="thirds" style="color:white; font-size: 12px;">
+<strong>Your HCPSS News Subscription</strong><br>
+Learn more about the email and text alerts included within your HCPSS News subscription.<br><br><span class="subscribe"><a href="/hcpss-news/"><i class="fa fa-bullhorn"></i>&nbsp;Learn More&nbsp;→</a></span>
+</div>
+      </section>
+    </div>
+  </li>
+  <li id="nav-search"><span><a id="menu-search-toggle" href="http://search.hcpss.org/search?q=&amp;btnG=Search&amp;proxystylesheet=hcpss_main_frontend&amp;client=hcpss_main_frontend&amp;oe=UTF-8&amp;ie=UTF-8&amp;numgm=5&amp;output=xml_no_dtd&amp;sort=date%3AD%3AL%3Ad1&amp;wc=200&amp;wc_mc=1&amp;ud=1&amp;exclude_apps=1&amp;site=www_main_site">
+    <i class="fa fa-search"></i> Search</a></span>
+    <div class="menu-drop" id="menu-search-drop">
+      <section>
+  <form action="http://search.hcpss.org/search" method="get" id="search">   
+  <input type="hidden" name="site" value="www_main_site" />
+  <input type="hidden" name="proxystylesheet" value="hcpss_main_frontend" />
+  <input type="hidden" name="client" value="hcpss_main_frontend"/>  
+  <input type="hidden" name="access" value="p" />
+  <input type="hidden" name="ie" value="UTF-8" />
+  <input type="hidden" name="oe" value="UTF-8" />
+  <input type="hidden" name="filter" value="0" />
+  <input type="hidden" name="numgm" value="5" />
+  <input type="hidden" name="btnG" value="Search" />
+  <input type="hidden" name="output" value="xml_no_dtd" />
+  <input type="hidden" name="sort" value="date:D:L:d1" />
+  <input type="text"  id="q" name="q" maxlength="255" />
+
+  <button id="search-button" type="submit" >Search</button>
+
+</form>
+     <p style="color: white;">Jump to: <a href="/about-us/forms/">Forms</a>
+
+      </section>
+    </div>
+  </li>
+</ul>
+</nav>
+</div>
+
+<div class="container group">
+<div class="main">
+        
+<h1>Map of HCPSS Schools</h1>
+
+    <div id="school-map">
+
+    </div>
+
+
+</div>
+</div>
+
+<div class="footer group">
+<div class="footer-inner group">
+<div class="footer-directions">
+  <a target="_blank" href="https://www.google.com/maps/preview?hl=en&amp;q=10910+Clarksville+Pike,+Ellicott+City,+MD+21042"><img id="hcpss-gmaps-footer-icon" src="http://s3.amazonaws.com/hcpss.web.site/images/directions-maps.png" height="120" width="120" alt="" /></a>
+  <address>
+  <strong>Howard County Public School System</strong><br>
+  10910 Clarksville Pike<br>
+  Ellicott City, MD 21042<br>
+  Main Phone: (410) 313-6600<br>
+  <a href="/employees/staff-directory/">Staff Directory</a> | <a href="/employment/#equal-opportunity">Equal Opportunity</a>
+</address>
+</div>
+<div class="footer-hcpssnews">
+<p><strong>Your HCPSS News Subscription</strong><br>
+Learn more about the email and text alerts included within your HCPSS News subscription.</p>
+<p> <span class="subscribe"><a href="/hcpss-news/"><i class="fa fa-bullhorn"></i>&nbsp;Learn more&nbsp;→</a></span></p>
+</div>
+</div>
+</div>
+
+<script type="text/javascript" src="./js/data.json"></script>
+<script type="text/javascript" src="./js/scripts.js"></script>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="http://s3.amazonaws.com/hcpss.web.site/images/jquery.searcher.min.js"></script>
+
+<script src="http://s3.amazonaws.com/hcpss.web.site/images/hcpss-2015-12-18.js"></script>
+
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJkhWrwo7r2_IAZ045B48HEDom0OD-qFE&callback=initMap"></script>      
+
+<script>
+if (window.matchMedia("(min-width: 685px)").matches) {
+$("#menu-about-toggle").mouseenter(function() {
+    $(".menu-active").toggleClass("menu-active");
+    $(".highlight").removeClass("highlight");
+    $("#menu-about-toggle").addClass("highlight");
+    $("#menu-about-drop").addClass("menu-active");
+});
+$("#menu-about-drop").mouseleave(function() {
+    $("#menu-about-drop").removeClass("menu-active");
+    $("#menu-about-toggle").removeClass("highlight");
+});
+
+$("#menu-schools-toggle").mouseenter(function() {
+    $(".menu-active").toggleClass("menu-active");
+    $(".highlight").removeClass("highlight");
+    $("#menu-schools-toggle").addClass("highlight");
+    $("#menu-schools-drop").addClass("menu-active");
+});
+$("#menu-schools-drop").mouseleave(function() {
+    $("#menu-schools-drop").removeClass("menu-active");
+    $("#menu-schools-toggle").removeClass("highlight");
+});
+
+$("#menu-academics-toggle").mouseenter(function() {
+    $(".menu-active").toggleClass("menu-active");
+    $(".highlight").removeClass("highlight");
+    $("#menu-academics-toggle").addClass("highlight");
+    $("#menu-academics-drop").addClass("menu-active");
+});
+$("#menu-academics-drop").mouseleave(function() {
+    $("#menu-academics-drop").removeClass("menu-active");
+    $("#menu-academics-toggle").removeClass("highlight");
+});
+
+$("#menu-services-toggle").mouseenter(function() {
+    $(".menu-active").toggleClass("menu-active");
+    $(".highlight").removeClass("highlight");
+    $("#menu-services-toggle").addClass("highlight");
+    $("#menu-services-drop").addClass("menu-active");
+});
+$("#menu-services-drop").mouseleave(function() {
+    $("#menu-services-drop").removeClass("menu-active");
+    $("#menu-services-toggle").removeClass("highlight");
+});
+
+
+$("#menu-news-toggle").mouseenter(function() {
+    $(".menu-active").toggleClass("menu-active");
+    $(".highlight").removeClass("highlight");
+    $("#menu-news-toggle").addClass("highlight");
+    $("#menu-news-drop").addClass("menu-active");
+});
+$("#menu-news-drop").mouseleave(function() {
+    $("#menu-news-drop").removeClass("menu-active");
+    $("#menu-news-toggle").removeClass("highlight");
+});
+
+$("#menu-search-toggle").mouseenter(function() {
+    $(".menu-active").toggleClass("menu-active");
+    $(".highlight").removeClass("highlight");
+    $("#menu-search-toggle").addClass("highlight");
+    $("#menu-search-drop").addClass("menu-active");
+});
+$("#menu-search-drop").mouseleave(function() {
+    $("#menu-search-drop").removeClass("menu-active");
+    $("#menu-search-toggle").removeClass("highlight");
+});
+
+};
+
+</script>
+
+</body>
+</html>
